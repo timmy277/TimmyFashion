@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Shirt1 from "../../assets/shirt/shirt.png";
 import Shirt2 from "../../assets/shirt/shirt2.png";
 import Shirt3 from "../../assets/shirt/shirt3.png";
