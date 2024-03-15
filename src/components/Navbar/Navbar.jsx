@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../assets/logo.png";
+import Logo from "../../assets/websites/logo.png";
 import { IoMdSearch } from "react-icons/io";
 // import {DarkMode} from "../Navbar/DarkMode";
 import {FaCartShopping} from "react-icons/fa6";
