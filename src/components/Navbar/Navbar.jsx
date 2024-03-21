@@ -1,9 +1,10 @@
 import React from "react";
 import Logo from "../../assets/websites/logo.png";
 import { IoMdSearch } from "react-icons/io";
-// import {DarkMode} from "../Navbar/DarkMode";
+// import { DarkMode } from "../Navbar/DarkMode";
 import {FaCartShopping} from "react-icons/fa6";
 import { FaCaretDown } from "react-icons/fa";
+
 
 const Menu = [
     {
@@ -70,7 +71,7 @@ const Navbar = ({handleOrderPopup}) => {
                             <span className="group-hover:block hidden transition-all duration-200">Order</span>
                             <FaCartShopping className="text-xl text-white drop-shadow-sm cursor-pointer"/>
                         </button>
-                        {/* Darkmode switch */}
+                        {/* DarkMode switch */}
                         <div>
                             {/* <DarkMode /> */}
                         </div>
@@ -110,3 +111,4 @@ const Navbar = ({handleOrderPopup}) => {
 };
 
 export default Navbar;
+
