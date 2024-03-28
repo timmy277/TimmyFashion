@@ -1,16 +1,13 @@
 import React from "react";
-import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import Products from "./components/Products/Products";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import TopRatedProducts from "./components/TopRatedProducts/TopRatedProducts";
-import Banner from "./components/Banner/Banner";
-import Subscribe from "./components/Subscribe/Subscribe";
-import Testimonials from "./components/Testimonials/Testimonials";
-import Footer from "./components/Footer/Footer";
-import Popup from "./components/Popup/Popup";
-
+import Home from "./pages/Home/Home";
+import ShopCategory from "./pages/ShopCategory/ShopCategory";
+import Product from "./pages/Product/Product";
+import Cart from './pages/Cart/Cart.jsx';
+import Login from './pages/Login/Login.jsx';
+import Register from './pages/Register/Register.jsx';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 const App = () => {
   const [orderPopup, setOrderPopup] = React.useState(false);
   const handleOrderPopup = () => {
@@ -28,16 +25,21 @@ const App = () => {
   }, []);
   return (
     <div>
-      <Navbar handleOrderPopup={handleOrderPopup} />
-      <Hero handleOrderPopup={handleOrderPopup} />
-      <Products />
-      <TopRatedProducts handleOrderPopup={handleOrderPopup} />
-      <Banner />
-      <Subscribe />
-      <Products />
-      <Testimonials />
-      <Footer />
-      <Popup orderPopup={orderPopup} setOrderPopup={setOrderPopup} />
+      <BrowserRouter>
+        <Home handleOrderPopup={handleOrderPopup} />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Men" element={<ShopCategory category="Men" />} />
+          <Route path="/Women" element={<ShopCategory category="Women" />} />
+          <Route path="/Kids" element={<ShopCategory category="Kids" />} />
+          <Route path="/product" element={<Product />}>
+            <Route path=":productId" element={<Product />} />
+          </Route>
+          <Route path="/Cart" element={<Cart />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/Register" element={<Register />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };
