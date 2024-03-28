@@ -6,12 +6,11 @@ import TopRatedProducts from "../../components/TopRatedProducts/TopRatedProducts
 import Banner from "../../components/Banner/Banner";
 import Subscribe from "../../components/Subscribe/Subscribe";
 import Testimonials from "../../components/Testimonials/Testimonials";
-import Footer from "../../components/Footer/Footer";
 import Popup from "../../components/Popup/Popup";
+import Items from "../../components/Item/Item";
 const Home = (handleOrderPopup) => {
     return (
     <div>
-        <Navbar handleOrderPopup={handleOrderPopup} />
         <Hero handleOrderPopup={handleOrderPopup} />
         <ListItem />
         <TopRatedProducts handleOrderPopup={handleOrderPopup} />
@@ -19,7 +18,6 @@ const Home = (handleOrderPopup) => {
         <Subscribe />
         <ListItem />
         <Testimonials />
-        <Footer />
         <Popup />
     </div>
     )

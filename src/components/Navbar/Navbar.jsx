@@ -31,8 +31,10 @@ const Navbar = ({handleOrderPopup}) => {
                         {/* order button */}
                         <button onClick={()=>handleOrderPopup()} className="flex items-center gap-3 px-4 py-1 text-white transition-all duration-200 rounded-full bg-gradient-to-r from-primary to-secondary group"
                         >
-                            <span className="hidden transition-all duration-200 group-hover:block">Order</span>
-                            <FaCartShopping className="text-xl text-white cursor-pointer drop-shadow-sm"/>
+                            <span className="hidden transition-all duration-200 group-hover:block">Order</span> 
+                            <Link to="/Cart">
+                                <FaCartShopping className="text-xl text-white cursor-pointer drop-shadow-sm"/>
+                            </Link>
                         </button>
                         {/* Darkmode switch */}
                         <div>
@@ -45,6 +47,11 @@ const Navbar = ({handleOrderPopup}) => {
             {/* lower navbar */}
             <div data-aos="zoom-in" className="flex justify-center">
                 <ul className="items-center hidden gap-4 sm:flex">
+                    <li onClick={()=>setMenu("Home")}>
+                        <Link to="/" className="inline-block px-4 duration-500 hover:text-primary" >
+                            Home
+                        </Link>{menu==="Men"?<hr/>:<></>}
+                    </li>
                     <li onClick={()=>setMenu("Men")}>
                         <Link to="/Men" className="inline-block px-4 duration-500 hover:text-primary" >
                             Men
@@ -86,6 +93,12 @@ const Navbar = ({handleOrderPopup}) => {
                                 </li>
                             </ul>
                         </div>
+                    </li>
+                    <li>
+                        <Link to="/Login" className="inline-block px-4 duration-500 hover:text-primary">Login</Link>
+                    </li>
+                    <li>
+                        <Link to="/Register" className="inline-block px-4 duration-500 hover:text-primary">Register</Link>
                     </li>
                 </ul>
             </div>
