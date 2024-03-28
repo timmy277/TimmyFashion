@@ -9,13 +9,14 @@ const RelatedProduct = () => {
         <h1 className="text-3xl font-bold">Related Products</h1>
         <hr />
       </div>
-      <div className="grid grid-cols-1 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center">
+      <div className="grid grid-cols-1 gap-5 my-10 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center">
         {ProductsData.map((item, i) => (
           <Item
             key={i}
             id={item.id}
             image={item.img}
             name={item.name}
+            rating={item.rating}
             new_price={item.new_price}
             old_price={item.old_price}
           />

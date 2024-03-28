@@ -83,25 +83,25 @@ const Testimonials = () => {
             <div className="container">
                 {/* header section */}
                 <div className="text-center mb-10 max-w-[600px] mx-auto">
-                    <p data-aos="fade-up" className="text-primary text-sm ">What our customers are saying</p>
+                    <p data-aos="fade-up" className="text-sm text-primary ">What our customers are saying</p>
                     <h1 data-aos="fade-up" className="text-3xl font-bold">Testimonials</h1>
-                    <p data-aos="fade-up" className='text-gray-500 text-xs'>Lorem ipsum dolor sit amet</p>
+                    <p data-aos="fade-up" className='text-xs text-gray-500'>Lorem ipsum dolor sit amet</p>
                 </div>
                 {/* Testimonials card */}
-                <div data-aos="zoom-in">
+                <div data-aos="zoom-in" className='mx-4'>
                     <Slider {...settings}>
                         {testimonialsData.map((data) => (
-                            <div className="flex flex-col gap-10 shadow-lg py-8 px-6 mx-4 rounded-xl dark:bg-gray-800 bg-primary/10 relative my-6 " key={data.id}>
+                            <div className="relative flex flex-col gap-10 px-6 py-8 mx-1 my-6 shadow-lg rounded-xl dark:bg-gray-800 bg-primary/10 " key={data.id}>
                                 <div className="mb-4">
                                     <img src={data.image} alt="" className='w-20 h-20 rounded-full'/>
                                 </div>
                                 <div className="flex flex-col items-center gap-4">
                                     <div className="space-y-3">
-                                        <p className='text-gray-500 text-xs'>{data.text}</p>
-                                        <h1 className="font-bold text-xl text-black/80 dark: text-light">{data.name}</h1>
+                                        <p className='text-xs text-gray-500'>{data.text}</p>
+                                        <h1 className="text-xl font-bold text-black/80 dark: text-light">{data.name}</h1>
                                     </div>
                                 </div>
-                                <p className='text-black/20 text-9xl font-serif absolute top-0 right-0'></p>
+                                <p className='absolute top-0 right-0 font-serif text-black/20 text-9xl'></p>
                             </div>
                         ))
                         }

@@ -19,17 +19,7 @@ const ListItem = (props) => {
                     {/* card section */}
                     {
                         ProductsData.map((item, i) => (
-                            <Item key={i} id={item.id}  image={item.img} name={item.name} new_price={item.new_price} old_price={item.old_price} />
-                            // <div data-aos="fade-up" data-aos-delay={data.aosDelay} key={data.id} className='space-y-3'>
-                            //     <img src={data.img} alt="" className='h-[220px] w-[150px] object-cover rounded-md'/>
-                            //     <div>
-                            //         <h3 className="font-semibold">{data.name}</h3>
-                            //         <div className="flex items-center gap-1">
-                            //             <FaStar className="text-yellow-500" />
-                            //             <span>{data.rating}</span>
-                            //         </div>
-                            //     </div>
-                            // </div>
+                            <Item key={i} id={item.id}  image={item.img} name={item.name} new_price={item.new_price} old_price={item.old_price} rating={item.rating}/>
                         ))
                     }
                 </div>
