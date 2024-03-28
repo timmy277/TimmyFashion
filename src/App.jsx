@@ -6,7 +6,7 @@ import ShopCategory from "./pages/ShopCategory/ShopCategory";
 import Product from "./pages/Product/Product";
 import Cart from "./pages/Cart/Cart.jsx";
 import Login from "./pages/Login/Login.jsx";
-import Register from "./pages/Register/Register.jsx";
+import SignUp from "./pages/SignUp/SignUp.jsx";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MenBanner from "./assets/banner/men_banner.png";
 import WomenBanner from "./assets/banner/women_banner.png";
@@ -16,9 +16,9 @@ import Footer from "./components/Footer/Footer.jsx";
 
 const App = () => {
   const [orderPopup, setOrderPopup] = React.useState(false);
-  const handleOrderPopup = () => {
-    setOrderPopup(!orderPopup);
-  };
+  // const handleOrderPopup = () => {
+  //   setOrderPopup(!orderPopup);
+  // };
 
   React.useEffect(() => {
     AOS.init({
@@ -52,7 +52,7 @@ const App = () => {
           </Route>
           <Route path="/Cart" element={<Cart />} />
           <Route path="/Login" element={<Login />} />
-          <Route path="/Register" element={<Register />} />
+          <Route path="/SignUp" element={<SignUp />} />
         </Routes>
         <Footer />
       </BrowserRouter>

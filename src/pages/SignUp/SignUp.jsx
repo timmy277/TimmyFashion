@@ -2,11 +2,11 @@ import React from 'react'
 import { FaUser } from "react-icons/fa";
 import { RiLockPasswordFill } from "react-icons/ri";
 import { Link } from 'react-router-dom';
-const Register = () => {
+const SignUp = () => {
     return (
     <div>
     <form >
-        <h1>Register</h1>
+        <h1>SignUp</h1>
         <div>
             <FaUser alt="user" id="username" />
             <label htmlFor="username">Name</label>
@@ -31,4 +31,4 @@ const Register = () => {
     )
 }
 
-export default Register
+export default SignUp

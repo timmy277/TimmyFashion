@@ -15,6 +15,7 @@ let ProductsData = [
         category: "Women",
         old_price: 20.00,
         new_price: 15.00,
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
     {
         id: 2,
@@ -26,6 +27,7 @@ let ProductsData = [
         category: "Men",
         old_price: 30.00,
         new_price: 25.00,
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
     {
         id: 3,
@@ -37,6 +39,7 @@ let ProductsData = [
         category: "Men",
         old_price: 50.00,
         new_price: 35.00,
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
     {
         id: 4,
@@ -48,6 +51,7 @@ let ProductsData = [
         category: "Kids",
         old_price: 10.00,
         new_price: 8.00,
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
     {
         id: 5,
@@ -59,6 +63,7 @@ let ProductsData = [
         category: "Women",
         old_price: 60.00,
         new_price: 45.00,
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
 ];
 

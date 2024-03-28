@@ -5,12 +5,13 @@ import { IoMdSearch } from "react-icons/io";
 import {FaCartShopping} from "react-icons/fa6";
 import { FaCaretDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { ShopContext } from "../../Context/ShopContext";
+import { useContext } from "react";
 
-
-
-const Navbar = ({handleOrderPopup}) => {
+const Navbar = ({}) => {
 
     const [menu, setMenu] = useState("Home");
+    const {getTotalCartItem} = useContext(ShopContext);
     
     return (
         <div className="relative z-40 duration-200 bg-white shadow-md dark:bg-gray-900 dark:text-white">
@@ -29,12 +30,13 @@ const Navbar = ({handleOrderPopup}) => {
                             />
                         </div>
                         {/* order button */}
-                        <button onClick={()=>handleOrderPopup()} className="flex items-center gap-3 px-4 py-1 text-white transition-all duration-200 rounded-full bg-gradient-to-r from-primary to-secondary group"
+                        <button className="flex items-center gap-3 px-4 py-1 text-white transition-all duration-200 rounded-full bg-gradient-to-r from-primary to-secondary group"
                         >
                             <span className="hidden transition-all duration-200 group-hover:block">Order</span> 
                             <Link to="/Cart">
                                 <FaCartShopping className="text-xl text-white cursor-pointer drop-shadow-sm"/>
                             </Link>
+                            <span>{getTotalCartItem()}</span>
                         </button>
                         {/* Darkmode switch */}
                         <div>
@@ -69,11 +71,9 @@ const Navbar = ({handleOrderPopup}) => {
                     </li>
                     {/* Dropdown and Link */}
                     <li className="relative cursor-pointer group">
-                        <a href="#" className="flex items-center gap-[2px] py-2">Trending Items
-                            <Link to="/Cart">
-                                <FaCaretDown className="transition-all duration-200 group-hover:rotate-180"/>
-                            </Link>
-                        </a>
+                        <Link to="/Cart" className="flex items-center gap-[2px] py-2">Trending Items
+                            <FaCaretDown className="transition-all duration-200 group-hover:rotate-180"/>
+                        </Link>
                         <div className="absolute z-[9999] hidden group-hover:block w-[150px] rounded-md bg-white p-2 text-black shadow-md">
                             <ul>
                                 <li onClick={()=>setMenu("Men")}>
@@ -98,7 +98,7 @@ const Navbar = ({handleOrderPopup}) => {
                         <Link to="/Login" className="inline-block px-4 duration-500 hover:text-primary">Login</Link>
                     </li>
                     <li>
-                        <Link to="/Register" className="inline-block px-4 duration-500 hover:text-primary">Register</Link>
+                        <Link to="/SignUp" className="inline-block px-4 duration-500 hover:text-primary">SignUp</Link>
                     </li>
                 </ul>
             </div>

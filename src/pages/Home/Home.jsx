@@ -7,13 +7,12 @@ import Banner from "../../components/Banner/Banner";
 import Subscribe from "../../components/Subscribe/Subscribe";
 import Testimonials from "../../components/Testimonials/Testimonials";
 import Popup from "../../components/Popup/Popup";
-import Items from "../../components/Item/Item";
-const Home = (handleOrderPopup) => {
+const Home = () => {
     return (
     <div>
-        <Hero handleOrderPopup={handleOrderPopup} />
+        <Hero />
         <ListItem />
-        <TopRatedProducts handleOrderPopup={handleOrderPopup} />
+        <TopRatedProducts />
         <Banner />
         <Subscribe />
         <ListItem />
