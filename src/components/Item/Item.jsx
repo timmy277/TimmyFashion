@@ -23,7 +23,7 @@ const Item = (props) => {
             <span>{props.rating}</span>
         </div>
         <div className="flex items-center gap-6 ml-2 space-x-4 justify-betweens">
-            <span>
+            <span className="font-bold text-green-600">
                 ${props.new_price}.00
             </span>
             <span className="line-through">
