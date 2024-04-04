@@ -11,7 +11,6 @@ import { FaUser } from "react-icons/fa";
 import { motion } from "framer-motion";
 const Navbar = () => {
 
-    const [menu, setMenu] = useState("Home");
     const {getTotalCartItem} = useContext(ShopContext);
     const [active, setActive] = useState(null);
     const [showUser, setShowUser] = useState(false);
@@ -54,7 +53,7 @@ const Navbar = () => {
                 <ul className="items-center hidden gap-4 sm:flex">
                 
                     <li onClick={()=>setActive("Home")}>
-                        <Link to="/" className="inline-block px-4 top-menu-item" >
+                        <Link to="/" className="inline-block hover:text-primary px-4 top-menu-item" >
                             <span className={`${active === "Home" ? "text-primary" : <></>}`}>Home</span>
                         </Link>
                     </li>
@@ -73,39 +72,13 @@ const Navbar = () => {
                     
                     <li onClick={()=>setActive("Blog")}>
                         <Link to="/Blog" className="inline-block px-4 top-menu-item hover:text-primary" >
-                        <span className={`${active === "Blog" ? "text-primary" : <></>}`}>Blog</span>
+                            <span className={`${active === "Blog" ? "text-primary" : <></>}`}>Blog</span>
                         </Link>
                     </li>
                     <li onClick={()=>setActive("Contact")}>
                         <Link to="/Contact" className="inline-block px-4 top-menu-item hover:text-primary" >
-                        <span className={`${active === "Contact" ? "text-primary" : <></>}`}>Contact</span>
+                            <span className={`${active === "Contact" ? "text-primary" : <></>}`}>Contact</span>
                         </Link>
-                    </li>
-                    
-                    {/* Dropdown and Link */}
-                    <li className="relative cursor-pointer group">
-                        <Link to="/Cart" className="flex items-center gap-[2px] py-2">Category
-                            <FaCaretDown className="transition-all duration-200 group-hover:rotate-180"/>
-                        </Link>
-                        <div className="absolute z-[9999] hidden group-hover:block w-[150px] rounded-md bg-gray-300 p-2 text-black shadow-md">
-                            <ul className="flex flex-col items-start justify-center gap-2">
-                                <li onClick={()=>setMenu("Men")}>
-                                    <Link to="/Men" className="inline-block px-4 duration-500 border-b-[1px] text-primary hover:text-white border-b-gray-400 hover:border-b-white cursor-pointer" >
-                                        Men
-                                    </Link>{menu==="Men"?<hr/>:<></>}
-                                </li>
-                                <li onClick={()=>setMenu("Women")}>
-                                    <Link to="/Women" className="inline-block px-4 duration-500 border-b-[1px] text-primary hover:text-white border-b-gray-400 hover:border-b-white cursor-pointer" >
-                                        Women
-                                    </Link>{menu==="Women"?<hr/>:<></>}
-                                </li>
-                                <li onClick={()=>setMenu("Kids")}>
-                                    <Link to="/Kids" className="inline-block px-4 duration-500 border-b-[1px] text-primary hover:text-white border-b-gray-400 hover:border-b-white cursor-pointer" >
-                                        Kids
-                                    </Link>{menu==="Kids"?<hr/>:<></>}
-                                </li>
-                            </ul>
-                        </div>
                     </li>
                         <div className="relative flex items-center gap-4 pr-6 mt-2 cursor-pointer lg:mt-0">
                             <div onClick={() => setShowUser(!showUser)} className="flex">

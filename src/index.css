@@ -20,6 +20,10 @@
   @apply cursor-pointer py-1 hover:text-gray-800 relative after:absolute after:bottom-0 after:left-0 after:bg-secondary after:h-0.5 after:w-0 hover:after:w-full after:transition-all after:ease-in-out after:duration-700;
 }
 
+.category-navbar-item {
+  @apply inline-block px-4 duration-500 border-b-[1px] text-black hover:text-green-300 hover:bg-secondary hover:border-b-white cursor-pointer text-2xl bg-white p-3 rounded-xl w-36 text-center;
+}
+
 .top-menu-item-active {
   @apply text-primary;
 }
