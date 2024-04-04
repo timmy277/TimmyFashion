@@ -1,9 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { ShopContext } from '../../Context/ShopContext';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import Item from '../Item/Item';
 import CategoryNavbar from '../CategoryNavbar/CategoryNavbar';
-import ProductsData from '../../assets/data';
 import Pagination from '../Pagination/Pagination';
 const AllProducts = () => {
 
@@ -13,6 +12,17 @@ const AllProducts = () => {
     const lastProductIndex = currentPage * productsPerPage;
     const firstProductIndex = lastProductIndex - productsPerPage;
     const currentProducts = ProductsData.slice(firstProductIndex, lastProductIndex);
+
+    // const [products, setProducts] = useState([]);
+
+    // useEffect(() => {
+    //     fetch('https://fakestoreapi.com/products')
+    //         .then(res=>res.json())
+    //         .then(data=>setProducts(data))
+    //         .catch(err=>console.log(err))
+    // },[])
+
+
     return (
         <div className='flex flex-col items-center justify-center my-16'>
             <CategoryNavbar />
