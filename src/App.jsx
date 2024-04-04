@@ -38,7 +38,7 @@ const App = () => {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home active="true"/>} />
+          <Route path="/" element={<Home active="true" />} />
           <Route
             path="/Men"
             element={<ShopCategory banner={MenBanner} category="Men" />}
@@ -51,6 +51,11 @@ const App = () => {
             path="/Kids"
             element={<ShopCategory banner={KidsBanner} category="Kids" />}
           />
+          <Route path="/MenProducts" element={<Shop category="Men" />} />
+          <Route path="/WomenProducts" element={<Shop category="Women" />} />
+          <Route path="/KidsProducts" element={<Shop category="Kids" />} />
+          <Route path="/AllProducts" element={<Shop />} />
+
           <Route path="/Product" element={<Product />}>
             <Route path=":productId" element={<Product />} />
           </Route>

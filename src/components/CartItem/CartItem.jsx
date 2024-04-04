@@ -34,32 +34,25 @@ const CartItem = () => {
                 return null;
             })}
             <div className='mx-5 my-6'>
-                <div className='flex flex-col'>
-                    <h1 className='text-xl font-bold'>Cart Totals</h1>
+                <div className='flex flex-col justify-center items-center'>
+                    <h1 className='text-3xl font-bold'>Cart Totals</h1>
                     <div>
-                        <div className='flex flex-row gap-3'>
-                            <p>Subtotal: </p>
+                        <div className='flex flex-row gap-3 my-2'>
+                            <p className='font-bold'>Subtotal: </p>
                             <p>${getTotalCartAmount()}</p>
                         </div>
                         <hr/>
                         <div className='flex flex-row gap-2'>
-                            <p>Shipping fee: </p>
+                            <p className='font-bold'>Shipping fee: </p>
                             <p className='text-green-500'> Free</p>
                         </div>
                         <hr/>
                         <div className='flex flex-row gap-2'>
-                            <h3>Total: </h3>
+                            <h3 className='font-bold'>Total: </h3>
                             <h3>${getTotalCartAmount()}</h3>
                         </div>
                     </div>
-                    <button>Proceed to checkout</button>
-                </div>
-                <div>
-                    <p>If you have promote code, enter it here!</p>
-                    <div>
-                        <input type="text" />
-                        <button type="submit">Submit</button>
-                    </div>
+                    <button className='px-4 py-1 mt-5 text-center text-white rounded-md cursor-pointer bg-primary w-48'>Proceed to checkout</button>
                 </div>
             </div>
         </div>

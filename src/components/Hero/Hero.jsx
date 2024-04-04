@@ -25,7 +25,7 @@ const ImageList = [
     }
 ];
 
-const Hero = ({ handleOrderPopup }) => {
+const Hero = () => {
     var settings = {
         dots: false,
         arrows: false,
@@ -43,7 +43,7 @@ const Hero = ({ handleOrderPopup }) => {
     return (
         <div className="relative overflow-hidden min-h-[550px] sm:min-h-[650px] bg-gray-100 flex justify-center items-center dark:bg-gray-950 dark:text-white duration-200 ">
             {/* background pattern */}
-            <div className="h=[700px] w-[700px] bg-primary/40 absolute -top-1/2 right-0 rounded-3xl rotate-45 -z[8]"></div>
+            <div className="h-[700px] w-[700px] bg-primary/40 absolute -top-1/2 right-0 rounded-3xl rotate-45 -z[8]"></div>
             {/* hero section */}
             <div className="container pb-8 sm:pb-0">
                 <Slider {...settings}>
@@ -55,7 +55,7 @@ const Hero = ({ handleOrderPopup }) => {
                                     <h1 data-aos="zoom-out" data-aos-duration="500" data-aos-once="true" className="text-5xl sm:text-6xl lg:text-7xl font-bold">{data.title}</h1>
                                     <p data-aos="fade-up"  data-aos-duration="500" data-aos-delay="100" className="text-sm">{data.description}</p>
                                     <div data-aos="fade-up"  data-aos-duration="500" data-aos-delay="300" className="">
-                                        <button onClick={() => handleOrderPopup()} className="bg-gradient-to-r from-primary to-secondary text-white py-2 px-4 rounded-full hover:scale-105 duration-200">Order Now</button>
+                                        <button className="bg-gradient-to-r from-primary to-secondary text-white py-2 px-4 rounded-full hover:scale-105 duration-200">Order Now</button>
                                     </div>
                                 </div>
 

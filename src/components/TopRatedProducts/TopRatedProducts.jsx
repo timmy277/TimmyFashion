@@ -4,7 +4,7 @@ import Shirt2 from "../../assets/shirt/shirt2.png";
 import Shirt3 from "../../assets/shirt/shirt3.png";
 import { FaStar } from "react-icons/fa";
 
-const ProductsData = [
+const TopRated = [
     {
         id: 1,
         image: Shirt1,
@@ -25,7 +25,7 @@ const ProductsData = [
     },
 ];
 
-const TopRatedProducts = ({ handleOrderPopup }) => {
+const TopRatedProducts = () => {
     return (
         <div >
             <div className='container'>
@@ -38,7 +38,7 @@ const TopRatedProducts = ({ handleOrderPopup }) => {
                 {/* Body section */}
                 <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:gap-5 place-items-center gap-20'>
                     {
-                        ProductsData.map((data) => (
+                        TopRated.map((data) => (
                             <div data-aos="zoom-in" className='rounded-2xl bg-white dark:bg-gray-400 hover:bg-black/80 dark:hover:bg-primary hover:text-white relative shadow-xl duration-300 group max-w-[300px]' key={data.id}>
                                 {/* image section */}
                                 <div className='h-[100px]'>
