@@ -8,7 +8,7 @@ const AllProducts = () => {
 
     const { ProductsData } = useContext(ShopContext);
     const [currentPage, setCurrentPage] = React.useState(1);
-    const [productsPerPage, setProductsPerPage] = React.useState(10);
+    const [productsPerPage, setProductsPerPage] = React.useState(8);
     const lastProductIndex = currentPage * productsPerPage;
     const firstProductIndex = lastProductIndex - productsPerPage;
     const currentProducts = ProductsData.slice(firstProductIndex, lastProductIndex);
@@ -26,7 +26,7 @@ const AllProducts = () => {
     return (
         <div className='flex flex-col items-center justify-center my-16'>
             <CategoryNavbar />
-            <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center my-10 gap-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 place-items-center my-10 gap-10">
                 {currentProducts.map((item, i) => {
                     return (
                         <div key={i} className="flex justify-center items-center flex-row">

@@ -22,8 +22,8 @@ const Item = (props) => {
             <FaStar className="text-yellow-500" />
             <span>{props.rating}</span>
         </div>
-        <div className="flex items-center gap-6 ml-2 space-x-4 justify-betweens">
-            <span className="font-bold text-green-600">
+        <div className="flex items-center gap-4 ml-2 space-x-4 justify-betweens">
+            <span className="font-bold text-xl text-green-600">
                 ${props.new_price}.00
             </span>
             <span className="line-through">

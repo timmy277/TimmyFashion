@@ -8,7 +8,7 @@ const ShopCategory = (props) => {
   return (
     <div className="container flex flex-col justify-center items-center mt-16 gap-10">
       <CategoryNavbar />
-        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center my-10 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 place-items-center my-10 gap-10">
           {ProductsData.map((item, i) => {
             if (props.category === item.category)
             {
